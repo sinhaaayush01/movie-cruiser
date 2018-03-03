@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Cruiser</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="navbar-fixed" id="nav">
+        <nav>
+            <div class="nav-wrapper blue-grey darken-4" id="navv">
+                <a href="#!" class="brand-logo"><img id="logo" src="logo.png" alt="The TmDB"/></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <button style="margin-right: 10px;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#collection">Create New Collection</button>
+                    </li>
+                    <!--<li>
+                        <button style="margin-right: 10px;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mycollection">My Collection</button>
+                    </li>-->
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li>
+                        <button style="margin-right: 10px;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#collection">Create New Collection</button>
+                    </li>
+                    <!--<li>
+                        <button style="margin-right: 10px;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mycollection">My Collection</button>
+                    </li>-->
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <hr>
+    <!-- Modal -->
+    <div id="collection" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add new title to your collection</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="collectiontitle" id="collectiontitle" placeholder="Enter your title">
+                </div>
+                <hr />
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default" onclick="setcollectiontitle()">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="text" name="searchId" id="searchId" placeholder="Type name of movie">
+            </div>
+            <div class="col-sm-3">
+                <button class="btn" type="submit" onclick="getMovie()">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8" id="showId">
+        </div>
+        <div class="col-sm-4" id="coltitle">
+            <h3>My Collections</h3>
+        </div>
+    </div>
+    <div id="buttonmodal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Which Collection to add to?</h4>
+                        </div>
+                        <div class="modal-body" id="bod">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+    <script src="collectiontitle.js"></script>
+    <script src="collectionarray.js"></script>
+    <script src="settitle.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
