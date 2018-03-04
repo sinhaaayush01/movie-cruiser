@@ -1,29 +1,16 @@
-	/*var a = {};
-	function setcollectiontitle() {
-	    var title = document.getElementById('collectiontitle').value;
-	    a[title] = [];
-	    //console.log(a);
-	    var add = `<ul id="${title}"><a href="#!">${title}</a></ul>`;
-	    var add1 = `<ul id="${title}" onclick="settitle(document.getElementById('${title}'))"><a href="#!">${title}</a></ul>`;
-	    document.getElementById('coltitle').innerHTML += add;
-	    document.getElementById('bod').innerHTML += add;
-	};
-	
-	*/
+var a = {};
 
-	var a = {};
+function setcollectiontitle() {
 
-	function setcollectiontitle() {
+    var title = document.getElementById('collectiontitle').value;
 
-	    var title = document.getElementById('collectiontitle').value;
-	  
-	    a[title] = [];
+    a[title] = [];
 
-	    var add = `<ul id="${title}"><a href="#!">${title}</a></ul>`;
+    var add = `<ul id="${title}"><a href="#!">${title}</a><button class='btn' onclick='deleteelem(${title})'>Delete</button></ul>`;
 
-	    var add1 = `<ul id="${title}" onclick="addtocollection1('${title}')"><a href="#!">${title}</a></ul>`;
+    var add1 = `<ul id="${title}" onclick="addtocollection1('${title}')"><a href="#!" data-dismiss="modal">${title}</a></ul>`;
 
-	    document.getElementById('coltitle').innerHTML += add;
+    document.getElementById('coltitle').innerHTML += add;
 
-	    document.getElementById('bod').innerHTML += add1;
-	};
+    document.getElementById('bod').innerHTML += add1;
+};
