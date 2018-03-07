@@ -9,3 +9,6 @@
 a:hover{
 	color: black;
 }
+.well{
+	max-width: 290px;
+}
